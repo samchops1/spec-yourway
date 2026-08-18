@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Your Way house mark">
+  <rect width="80" height="80" rx="8" fill="#0d3552"/>
+  <path d="M12 36.5 L40 12 L68 36.5 V68 H12 Z" fill="#f3ead8"/>
+  <path d="M40 18.5 L20 36 V64 H60 V36 Z" fill="#0d3552"/>
+  <!-- paintbrush -->
+  <path d="M24.5 40.5 l4.2-7.4 3.1 1.8-2.4 7.2-4.9-1.6z" fill="#c24e24"/>
+  <rect x="27.2" y="46.2" width="3.4" height="12" rx="1" fill="#f3ead8"/>
+  <!-- wrench -->
+  <path d="M39 38.5c2.6-2.6 6.6-2.4 8.4-.6l-2.3 2.3c-.7-.6-1.9-.7-2.6 0-.8.8-.7 2 .1 2.7l8.6 8.6-2.4 2.4-8.6-8.6c-1.8-1.8-2-5.8.8-8.8z" fill="#f3ead8"/>
+  <!-- screwdriver -->
+  <rect x="54.2" y="40" width="2.6" height="16" rx="1" transform="rotate(28 55.5 48)" fill="#e0a84a"/>
+  <path d="M58.8 37.2 l4.4 2.4-1.4 2.6-4.4-2.4z" fill="#c24e24"/>
+</svg>
