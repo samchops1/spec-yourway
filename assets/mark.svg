@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Your Way house mark">
-  <rect width="80" height="80" rx="8" fill="#0d3552"/>
-  <path d="M12 36.5 L40 12 L68 36.5 V68 H12 Z" fill="#f3ead8"/>
-  <path d="M40 18.5 L20 36 V64 H60 V36 Z" fill="#0d3552"/>
-  <!-- paintbrush -->
-  <path d="M24.5 40.5 l4.2-7.4 3.1 1.8-2.4 7.2-4.9-1.6z" fill="#c24e24"/>
-  <rect x="27.2" y="46.2" width="3.4" height="12" rx="1" fill="#f3ead8"/>
-  <!-- wrench -->
-  <path d="M39 38.5c2.6-2.6 6.6-2.4 8.4-.6l-2.3 2.3c-.7-.6-1.9-.7-2.6 0-.8.8-.7 2 .1 2.7l8.6 8.6-2.4 2.4-8.6-8.6c-1.8-1.8-2-5.8.8-8.8z" fill="#f3ead8"/>
-  <!-- screwdriver -->
-  <rect x="54.2" y="40" width="2.6" height="16" rx="1" transform="rotate(28 55.5 48)" fill="#e0a84a"/>
-  <path d="M58.8 37.2 l4.4 2.4-1.4 2.6-4.4-2.4z" fill="#c24e24"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">Your Way</title>
+  <desc id="d">House with hammer and wrench</desc>
+  <rect width="64" height="64" rx="6" fill="#0d3552"/>
+  <path d="M8 30 L32 10 L56 30 V54 H40 V38 H24 V54 H8 Z" fill="#f6f0e4"/>
+  <path d="M32 10 L56 30 H50 L32 16 L14 30 H8 Z" fill="#d4920b"/>
+  <g fill="#0d3552">
+    <rect x="28" y="34" width="5" height="16" rx="1"/>
+    <path d="M24 34 h13 l-2 6 h-9 z"/>
+    <path d="M42 36 c4 0 7 2 7 5 s-2 4-4 4 c1 2 3 5 1 6 l-2-1 c1-1 0-3-1-4 h-2 v-3 h2 c1 0 2-1 2-2 s-1-2-3-2 v-3 z"/>
+  </g>
 </svg>

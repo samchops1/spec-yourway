@@ -1,44 +1,23 @@
 (function () {
-  var toggle = document.querySelector("[data-nav-toggle]");
+  var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
-  if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
+  if (!toggle || !nav) return;
+  function desktop() { return window.matchMedia("(min-width: 48rem)").matches; }
+  function close() { toggle.setAttribute("aria-expanded", "false"); nav.hidden = true; }
+  function open() { toggle.setAttribute("aria-expanded", "true"); nav.hidden = false; }
+  function sync() {
+    if (desktop()) { nav.hidden = false; toggle.setAttribute("aria-expanded", "true"); }
+    else if (toggle.getAttribute("aria-expanded") !== "true") nav.hidden = true;
   }
-
-  var form = document.querySelector("[data-quote-form]");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var name = (form.querySelector('[name="name"]') || {}).value || "";
-      var email = (form.querySelector('[name="email"]') || {}).value || "";
-      var phone = (form.querySelector('[name="phone"]') || {}).value || "";
-      var address = (form.querySelector('[name="address"]') || {}).value || "";
-      var message = (form.querySelector('[name="message"]') || {}).value || "";
-      var lines = [
-        "Free quote request from the Your Way site preview.",
-        "",
-        "Name: " + name,
-        "Email: " + email,
-        "Phone: " + phone,
-        "Address: " + address,
-        "",
-        message
-      ];
-      var href =
-        "mailto:YourwayHIHSllc@gmail.com?subject=" +
-        encodeURIComponent("Quote request — Your Way Home Improvements") +
-        "&body=" +
-        encodeURIComponent(lines.join("\n"));
-      window.location.href = href;
-    });
-  }
+  toggle.addEventListener("click", function () {
+    if (toggle.getAttribute("aria-expanded") === "true") close(); else open();
+  });
+  nav.addEventListener("click", function (e) {
+    if (!desktop() && e.target.closest("a")) close();
+  });
+  window.addEventListener("resize", sync);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !desktop()) close();
+  });
+  sync();
 })();
